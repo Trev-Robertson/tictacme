@@ -14,9 +14,9 @@ export const GameBoard = () => {
                 return (
                     <div className='center' key={index}>
                         {row.map((square, index) => 
-                        <div className='center' key={index}>
-                        <GameSquare key={index} marker={square}/>
-                        </div>
+                            <div className='center' key={index}>
+                                <GameSquare key={index} marker={square}/>
+                            </div>
                         )}
                     </div>
                 )
