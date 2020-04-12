@@ -11,11 +11,11 @@ import AppReducer from "./AppReducer";
 //   }
 // };
 const initialState = {
-    gameBoard: 
-      [["X", "O", "O"],
-       ["O", "X", "X"],
-       ["X", "O", "X"]
-      ]
+    gameBoard:     
+    [["", "", ""],
+    ["", "", ""],
+    ["", "", ""]
+   ]
   };
 
 //Create Context
