@@ -1,10 +1,10 @@
 import React from 'react'
 
-export const GameSquare = () => {
+export const GameSquare = ({marker}) => {
     return (
         <div>
             <button className='button'>
-            X
+            {marker}
             </button>
         </div>
     )

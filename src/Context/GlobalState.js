@@ -40,7 +40,7 @@ export const GlobalProvider = ({children}) => {
     }
     return (<GlobalContext.Provider
                 value={{
-                    gameBoard: state.gameBoard, 
+                    gameBoardState: state.gameBoard, 
                     markSquare, 
                     resetBoard
                 }}
