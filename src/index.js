@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
-var PORT = process.env.PORT || 3000;
+
 
 ReactDOM.render(
   <React.StrictMode>
