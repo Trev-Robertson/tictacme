@@ -67,7 +67,7 @@ export const GameBoard = () => {
         <div>
             <button className='reset-button' onClick={reset}>
                     Reset Game
-            </button>
+            </button> 
         </div>
             <div className='center'>
              <GameSquare index={0} marker={gameBoardState[0]} handleClick={handleClick} gameStatus={gameStatus}/>
