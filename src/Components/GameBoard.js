@@ -8,10 +8,10 @@ export const GameBoard = () => {
     const [marker, setMarker] = useState('X')
     const [moveNumber, setMoveNumber] = useState(0)
 
-    const handleClick = (coordinates) =>{
+    const handleClick = (index) =>{
         const updatedGameBoard = [...gameBoardState]
-       const [a, b] = coordinates
-        updatedGameBoard[a][b] = marker
+       
+        updatedGameBoard[index] = marker
         markSquare(updatedGameBoard)
         setMarker( marker === 'X' ? 'O' : 'X')
         let newMoveNumber = moveNumber + 1
@@ -22,25 +22,8 @@ export const GameBoard = () => {
     
     
     // const calculateWinner = () => {
-    //     const list = [
-    //         [[0,0], [0,1], [0, 2]], 
-    //         [[1,0], [1,1], [1, 2]],
-    //         [[2,0], [2,1], [2, 2]],
-            
-    //         [[0,0], [1,1], [2, 2]],
-    //         [[0,2], [1,1], [2, 0]],
-            
-    //         [[0,0], [1,0], [2, 0]],
-    //         [[0,1], [1,1], [2, 1]],
-    //         [[0,2], [1,2], [2, 2]],
-    //     ]
-    
-    //       const updatedGameBoard = [...gameBoardState]
-        
-    //     for (let i = 0; i < list.length; i++) {
-           
-    //     } 
-        
+   
+
     // }
 
 
@@ -51,31 +34,35 @@ export const GameBoard = () => {
         resetBoard()
     }
 
+
     
 
     return (
-
+        
+        <div>
         <div>
             {moveNumber < 9 ? <h1>Current Player: {marker}</h1> : <h1>End Game</h1>}
+        </div>
         <div>
             <button className='reset-button' onClick={reset}>
                     Reset Button
             </button>
-        <div>
-            {gameBoardState.map((row, index) => {
-                const column = index
-                return (
-                    <div className='center' key={index}>
-                        {row.map((square, index) => 
-                            <div className='center'  key={index}>
-                                <GameSquare key={index} marker={square} coordinates={[column, index]} handleClick={handleClick}/>
-                            </div>
-                        )}
-                    </div>
-                )
-            })}
         </div>
-        </div>
+            <div className='center'>
+             <GameSquare index={0} marker={gameBoardState[0]} handleClick={handleClick}/>
+             <GameSquare index={1} marker={gameBoardState[1]} handleClick={handleClick}/>
+             <GameSquare index={2} marker={gameBoardState[2]} handleClick={handleClick}/>
+            </div>
+            <div className='center'>
+             <GameSquare index={3} marker={gameBoardState[3]} handleClick={handleClick}/>
+             <GameSquare index={4} marker={gameBoardState[4]} handleClick={handleClick}/>
+             <GameSquare index={5} marker={gameBoardState[5]} handleClick={handleClick}/>
+            </div>
+            <div className='center'>
+             <GameSquare index={6} marker={gameBoardState[6]} handleClick={handleClick}/>
+             <GameSquare index={7} marker={gameBoardState[7]} handleClick={handleClick}/>
+             <GameSquare index={8} marker={gameBoardState[8]} handleClick={handleClick}/>
+            </div>
         </div>
     )
 }

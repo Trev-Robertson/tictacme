@@ -2,20 +2,12 @@ import React, { createContext, useReducer } from "react";
 import AppReducer from "./AppReducer";
 
 // Initial State
-
-// const initialState = {
-//   gameBoard: {
-//     row1: ["X", "O", "O"],
-//     row2: ["O", "X", "X"],
-//     row3: ["X", "O", "X"]
-//   }
-// };
 const initialState = {
     gameBoard:     
-    [["", "", ""],
-    ["", "", ""],
-    ["", "", ""]
-   ]
+    ["", "", "",
+    "", "", "",
+    "", "", ""]
+   
   };
 
 //Create Context
