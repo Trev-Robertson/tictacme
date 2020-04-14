@@ -60,7 +60,7 @@ export const GameBoard = () => {
     return (
         
         <div>
-            <h1>Renee, Raiyah, and Raielle's Ultimate Tic Tac Toe</h1>
+            <h1>Renee, Raiyah, and Raielle's Ultimate Tic Tac Toe </h1>
         <div>
     {moveNumber >= 9 ? <h2>End Game</h2> : calculateWinner() ? <h2>Player {`${calculateWinner()[1]}`} is the Winner! </h2> : <h2>Current Player: {marker}</h2>}
         </div>
